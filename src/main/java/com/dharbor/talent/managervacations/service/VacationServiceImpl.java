@@ -2,9 +2,7 @@ package com.dharbor.talent.managervacations.service;
 
 import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.domain.Vacation;
-import com.dharbor.talent.managervacations.domain.VacationsStatus;
 import com.dharbor.talent.managervacations.repository.VacationRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

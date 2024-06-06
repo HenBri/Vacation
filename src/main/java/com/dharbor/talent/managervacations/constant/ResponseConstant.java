@@ -4,7 +4,7 @@ public class ResponseConstant {
     public static  class StatusCodeResponse{
 
         public static final String SUCCESS_CODE="200";
-        public static final String SUCCESS_MSG="Succes";
+        public static final String SUCCESS_MSG="Success";
 
         private StatusCodeResponse(){throw new IllegalStateException("Filed");}
     }

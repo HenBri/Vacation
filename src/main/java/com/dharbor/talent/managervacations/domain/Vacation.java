@@ -1,9 +1,6 @@
 package com.dharbor.talent.managervacations.domain;
 
-import com.sun.tools.jconsole.JConsoleContext;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,10 +26,14 @@ public class Vacation {
 
     @Enumerated(EnumType.STRING)
     @Column(name = Constants.VacationsTable.Status.NAME, length = Constants.VacationsTable.Status.LENGTH, nullable = false)
-    private VacationsStatus vacationsStatus;
+    private VacationStatus vacationStatus;
 
     @ManyToOne
     @JoinColumn(name = Constants.VacationsTable.User.NAME, referencedColumnName = Constants.UsersTable.Id.NAME)
     private User user;
 
+    @PrePersist
+    void onPrePersist(){
+        this.vacationStatus= vacationStatus.REQUESTED;
+    }
 }

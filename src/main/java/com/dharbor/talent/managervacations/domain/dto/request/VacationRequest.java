@@ -1,7 +1,7 @@
 package com.dharbor.talent.managervacations.domain.dto.request;
 
 import com.dharbor.talent.managervacations.domain.VacationType;
-import com.dharbor.talent.managervacations.domain.VacationsStatus;
+import com.dharbor.talent.managervacations.domain.VacationStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,5 +12,4 @@ import java.util.Date;
 public class VacationRequest {
     private VacationType type;
     private Date dayOff;
-    private VacationsStatus status;
 }
