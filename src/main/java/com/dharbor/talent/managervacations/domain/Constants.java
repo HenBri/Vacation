@@ -42,7 +42,7 @@ final class Constants {
         }
         static class Status{
             static final  String NAME ="vacations_status";
-            static final int LENGTH = 20;
+            static final int LENGTH = 9;
         }
         static class User{
             static final String NAME= "vacations_user";

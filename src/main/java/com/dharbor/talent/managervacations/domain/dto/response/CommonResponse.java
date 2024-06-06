@@ -1,13 +1,13 @@
 package com.dharbor.talent.managervacations.domain.dto.response;
 
 import com.dharbor.talent.managervacations.constant.ResponseConstant;
+import lombok.*;
+
 import org.apache.coyote.Response;
-
+@Getter
+@Setter
+@AllArgsConstructor
 public abstract class CommonResponse extends ResponseConstant{
-    private StatusCodeResponse statusCode;
-    private  String messaje;
-    //public CommonResponse(ResponseConstant.StatusCodeResponse.SUCCESS_CODE, String message) {
-
-
-    //}
+   private String statusCode;
+   private String message;
 }

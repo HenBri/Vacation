@@ -1,6 +1,6 @@
 package com.dharbor.talent.managervacations.domain;
 
-public enum VacationsStatus {
+public enum VacationStatus {
     REQUESTED,
     APROVED
 }

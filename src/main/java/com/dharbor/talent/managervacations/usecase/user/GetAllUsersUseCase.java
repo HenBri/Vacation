@@ -1,4 +1,4 @@
-package com.dharbor.talent.managervacations.usecase;
+package com.dharbor.talent.managervacations.usecase.user;
 
 import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.service.IUserService;
@@ -7,8 +7,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author Henry Aspeti
+ * ShadowDevHat
+ * U/J/A
+ */
 @Service
-public class GetUserByIdUseCase {
+public class GetAllUsersUseCase {
     @Autowired
     private IUserService userService;
 
