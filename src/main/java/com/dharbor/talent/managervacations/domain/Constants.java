@@ -35,7 +35,7 @@ final class Constants {
         }
         static class Type{
             static final String NAME ="vacations_type";
-            static final int LENGTH =12;
+            static final int LENGTH =15;
         }
         static class DayOff{
             static final String NAME="vacations_day_off";

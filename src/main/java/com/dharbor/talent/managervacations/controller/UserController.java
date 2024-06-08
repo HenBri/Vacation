@@ -3,6 +3,7 @@ package com.dharbor.talent.managervacations.controller;
 
 import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.domain.dto.request.UserRequest;
+import com.dharbor.talent.managervacations.domain.dto.response.GetUsersResponse;
 import com.dharbor.talent.managervacations.domain.dto.response.UserResponse;
 import com.dharbor.talent.managervacations.domain.dto.response.UserResponseDelete;
 import com.dharbor.talent.managervacations.usecase.user.*;
@@ -45,7 +46,7 @@ public class UserController {
     }
 
     @GetMapping("GetAll")
-    public List<User> getAllUsers() {
+    public GetUsersResponse getAllUsers() {
         return getAllUsers.execute();
     }
 }

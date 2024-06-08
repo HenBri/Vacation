@@ -19,8 +19,8 @@ public class VacationServiceImpl implements IVacationService {
     }
 
     @Override
-    public List<Vacation> getVacationsByUser(User user) {
-        return null;
+    public List<Vacation> getVacationByUser(User user) {
+        return vacationRepository.findByUser(user);
     }
 
     @Override
@@ -36,5 +36,9 @@ public class VacationServiceImpl implements IVacationService {
     @Override
     public Vacation save(Vacation vacation) {
         return vacationRepository.save(vacation);
+    }
+    @Override
+    public void deleteAllByUser(User user){
+            vacationRepository.deleteByUser(user);
     }
 }

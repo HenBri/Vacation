@@ -1,4 +1,4 @@
-package com.dharbor.talent.managervacations.usecase;
+package com.dharbor.talent.managervacations.usecase.vacation;
 
 import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.domain.Vacation;
