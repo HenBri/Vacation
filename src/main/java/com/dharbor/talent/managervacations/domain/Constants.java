@@ -31,7 +31,7 @@ final class Constants {
         static final String NAME="vacations_table";
 
         static class Id{
-            static final String NAME="vacations_table";
+            static final String NAME="vacations_id";
         }
         static class Type{
             static final String NAME ="vacations_type";
@@ -46,6 +46,20 @@ final class Constants {
         }
         static class User{
             static final String NAME= "vacations_user";
+        }
+    }
+    static class CountryTable{
+        static final String NAME= "countries_table";
+        static class Id{
+            static final String NAME = "countries_id";
+        }
+        static class Code{
+            static final String NAME= "countries_code";
+            static final int LENGTH = 12;
+        }
+        static class Name{
+            static final String NAME = "countries_name";
+            static final int LENGTH = 12;
         }
     }
 }
