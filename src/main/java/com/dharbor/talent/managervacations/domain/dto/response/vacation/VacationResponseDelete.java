@@ -1,7 +1,7 @@
-package com.dharbor.talent.managervacations.domain.dto.response;
+package com.dharbor.talent.managervacations.domain.dto.response.vacation;
 
-import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.domain.Vacation;
+import com.dharbor.talent.managervacations.domain.dto.response.CommonResponse;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,7 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class VacationResponseDelete extends CommonResponse{
+public class VacationResponseDelete extends CommonResponse {
     private Vacation vacation;
     public VacationResponseDelete(Vacation vacation) {
         super(DeleteCodeResponse.SUCCESS_CODE, DeleteCodeResponse.SUCCESS_MSG);

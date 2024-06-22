@@ -3,7 +3,7 @@ package com.dharbor.talent.managervacations.usecase.vacation;
 import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.domain.Vacation;
 import com.dharbor.talent.managervacations.domain.dto.request.VacationRequest;
-import com.dharbor.talent.managervacations.domain.dto.response.VacationResponse;
+import com.dharbor.talent.managervacations.domain.dto.response.vacation.VacationResponse;
 import com.dharbor.talent.managervacations.service.IUserService;
 import com.dharbor.talent.managervacations.service.IVacationService;
 import org.springframework.beans.factory.annotation.Autowired;

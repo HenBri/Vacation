@@ -1,7 +1,7 @@
 package com.dharbor.talent.managervacations.usecase.vacation;
 
 import com.dharbor.talent.managervacations.domain.Vacation;
-import com.dharbor.talent.managervacations.domain.dto.response.VacationResponseDelete;
+import com.dharbor.talent.managervacations.domain.dto.response.vacation.VacationResponseDelete;
 import com.dharbor.talent.managervacations.service.IVacationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

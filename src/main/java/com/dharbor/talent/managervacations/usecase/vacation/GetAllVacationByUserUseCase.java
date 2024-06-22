@@ -2,15 +2,13 @@ package com.dharbor.talent.managervacations.usecase.vacation;
 
 import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.domain.Vacation;
-import com.dharbor.talent.managervacations.domain.dto.response.GetVacationsResponse;
-import com.dharbor.talent.managervacations.domain.dto.response.VacationResponse;
+import com.dharbor.talent.managervacations.domain.dto.response.vacation.GetVacationsResponse;
 import com.dharbor.talent.managervacations.service.IUserService;
 import com.dharbor.talent.managervacations.service.IVacationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * @author Henry Aspeti

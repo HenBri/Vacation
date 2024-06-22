@@ -1,9 +1,9 @@
 package com.dharbor.talent.managervacations.controller;
 
 import com.dharbor.talent.managervacations.domain.dto.request.CountryRequest;
-import com.dharbor.talent.managervacations.domain.dto.response.CountryResponse;
-import com.dharbor.talent.managervacations.domain.dto.response.CountryResponseDelete;
-import com.dharbor.talent.managervacations.domain.dto.response.GetCountriesResponse;
+import com.dharbor.talent.managervacations.domain.dto.response.country.CountryResponse;
+import com.dharbor.talent.managervacations.domain.dto.response.country.CountryResponseDelete;
+import com.dharbor.talent.managervacations.domain.dto.response.country.GetCountriesResponse;
 import com.dharbor.talent.managervacations.usecase.country.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,15 +35,15 @@ public class CountryController {
     public GetCountriesResponse getAllCountries(){
         return getAllCountriesUseCase.execute();
     }
-    @DeleteMapping("/{idCountry}")
+    @DeleteMapping("DeleteCountryById/{idCountry}")
     public CountryResponseDelete deleteCountryById(@PathVariable Long idCountry){
         return deleteCountryByIdUseCase.execute(idCountry);
     }
-    @GetMapping("/{idCountry}")
+    @GetMapping("GetCountryById/{idCountry}")
     public CountryResponse getCountryById(@PathVariable Long idCountry){
         return getCountryByIdUseCase.execute(idCountry);
     }
-    @PutMapping("/{idCountry}")
+    @PutMapping("UpdateCountry/{idCountry}")
     public CountryResponse updateCountryById(@RequestBody CountryRequest countryRequest, @PathVariable Long idCountry){
         return  updateCountryByIdUseCase.execute(idCountry,countryRequest);
     }

@@ -2,12 +2,10 @@ package com.dharbor.talent.managervacations.usecase.user;
 
 import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.domain.dto.request.UserRequest;
-import com.dharbor.talent.managervacations.domain.dto.response.UserResponse;
+import com.dharbor.talent.managervacations.domain.dto.response.user.UserResponse;
 import com.dharbor.talent.managervacations.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Date;
 
 @Service
 public class CreateUserUseCase {

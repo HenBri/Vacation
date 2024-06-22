@@ -2,11 +2,10 @@ package com.dharbor.talent.managervacations.controller;
 
 
 import com.dharbor.talent.managervacations.domain.dto.request.VacationRequest;
-import com.dharbor.talent.managervacations.domain.dto.response.GetVacationsResponse;
-import com.dharbor.talent.managervacations.domain.dto.response.GetVacationsResponseDelete;
-import com.dharbor.talent.managervacations.domain.dto.response.VacationResponse;
-import com.dharbor.talent.managervacations.domain.dto.response.VacationResponseDelete;
-import com.dharbor.talent.managervacations.usecase.user.GetAllUsersUseCase;
+import com.dharbor.talent.managervacations.domain.dto.response.vacation.GetVacationsResponse;
+import com.dharbor.talent.managervacations.domain.dto.response.vacation.GetVacationsResponseDelete;
+import com.dharbor.talent.managervacations.domain.dto.response.vacation.VacationResponse;
+import com.dharbor.talent.managervacations.domain.dto.response.vacation.VacationResponseDelete;
 import com.dharbor.talent.managervacations.usecase.vacation.CreateVacationUseCase;
 import com.dharbor.talent.managervacations.usecase.vacation.DeleteAllVacationByUserUseCase;
 import com.dharbor.talent.managervacations.usecase.vacation.DeleteVacationByIdUseCase;

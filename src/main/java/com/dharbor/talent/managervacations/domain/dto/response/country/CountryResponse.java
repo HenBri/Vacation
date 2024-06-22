@@ -1,9 +1,7 @@
-package com.dharbor.talent.managervacations.domain.dto.response;
+package com.dharbor.talent.managervacations.domain.dto.response.country;
 
 import com.dharbor.talent.managervacations.domain.Country;
-import com.dharbor.talent.managervacations.domain.dto.request.CountryRequest;
-import com.mysql.cj.Constants;
-import com.mysql.cj.exceptions.CJOperationNotSupportedException;
+import com.dharbor.talent.managervacations.domain.dto.response.CommonResponse;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,7 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class CountryResponse extends CommonResponse{
+public class CountryResponse extends CommonResponse {
     private Country country;
 
     public CountryResponse(Country country) {

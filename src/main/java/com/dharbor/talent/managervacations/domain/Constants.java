@@ -62,4 +62,21 @@ final class Constants {
             static final int LENGTH = 12;
         }
     }
+    static class HolidayTable{
+        static final String NAME = "holidays_table";
+        static class Id{
+            static final String NAME="holidays_id";
+        }
+        static class Reason{
+            static final String NAME = "holidays_reason";
+            static final int LENGTH= 15;
+
+        }
+        static class Date{
+            static final String NAME = "holidays_date";
+        }
+        static class Country{
+            static final String NAME= "holidays_country";
+        }
+    }
 }

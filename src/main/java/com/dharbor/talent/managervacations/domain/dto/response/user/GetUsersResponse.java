@@ -1,6 +1,7 @@
-package com.dharbor.talent.managervacations.domain.dto.response;
+package com.dharbor.talent.managervacations.domain.dto.response.user;
 
 import com.dharbor.talent.managervacations.domain.User;
+import com.dharbor.talent.managervacations.domain.dto.response.CommonResponse;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +14,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class GetUsersResponse extends CommonResponse{
+public class GetUsersResponse extends CommonResponse {
     private List<User> users;
 
     public GetUsersResponse(List<User> users){
