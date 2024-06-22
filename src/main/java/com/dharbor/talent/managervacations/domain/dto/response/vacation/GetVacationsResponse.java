@@ -1,13 +1,11 @@
-package com.dharbor.talent.managervacations.domain.dto.response;
+package com.dharbor.talent.managervacations.domain.dto.response.vacation;
 
-import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.domain.Vacation;
+import com.dharbor.talent.managervacations.domain.dto.response.CommonResponse;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * @author Henry Aspeti
@@ -16,7 +14,7 @@ import java.util.Optional;
  */
 @Getter
 @Setter
-public class GetVacationsResponse extends CommonResponse{
+public class GetVacationsResponse extends CommonResponse {
     private List<Vacation> vacations;
 
     public GetVacationsResponse(List<Vacation> vacations){

@@ -1,14 +1,13 @@
-package com.dharbor.talent.managervacations.domain.dto.response;
+package com.dharbor.talent.managervacations.domain.dto.response.user;
 
-import com.dharbor.talent.managervacations.constant.ResponseConstant;
 import com.dharbor.talent.managervacations.domain.User;
+import com.dharbor.talent.managervacations.domain.dto.response.CommonResponse;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.coyote.Response;
 
 @Getter
 @Setter
-public class UserResponse extends CommonResponse{
+public class UserResponse extends CommonResponse {
     private User user;
 
     public UserResponse(User user){

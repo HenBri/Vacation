@@ -2,18 +2,14 @@ package com.dharbor.talent.managervacations.usecase.vacation;
 
 import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.domain.Vacation;
-import com.dharbor.talent.managervacations.domain.dto.response.GetVacationsResponseDelete;
-import com.dharbor.talent.managervacations.domain.dto.response.VacationResponseDelete;
+import com.dharbor.talent.managervacations.domain.dto.response.vacation.GetVacationsResponseDelete;
 import com.dharbor.talent.managervacations.service.IUserService;
 import com.dharbor.talent.managervacations.service.IVacationService;
-import jdk.dynalink.linker.LinkerServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.awt.*;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * @author Henry Aspeti
@@ -27,7 +23,7 @@ public class DeleteAllVacationByUserUseCase {
     @Autowired
     private IUserService userService;
 
-    @Transactional
+
     public GetVacationsResponseDelete execute(Long userId){
         User user = userService.findById(userId);
         GetVacationsResponseDelete vacationsResponse = build(user);

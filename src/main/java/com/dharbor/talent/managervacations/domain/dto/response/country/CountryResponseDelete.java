@@ -1,7 +1,8 @@
-package com.dharbor.talent.managervacations.domain.dto.response;
+package com.dharbor.talent.managervacations.domain.dto.response.country;
 
 import com.dharbor.talent.managervacations.constant.ResponseConstant;
 import com.dharbor.talent.managervacations.domain.Country;
+import com.dharbor.talent.managervacations.domain.dto.response.CommonResponse;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,7 +13,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class CountryResponseDelete extends CommonResponse{
+public class CountryResponseDelete extends CommonResponse {
     private Country country;
 
     public CountryResponseDelete(Country country) {

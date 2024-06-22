@@ -20,7 +20,7 @@ public class Country {
     @Id
     @Column(name = Constants.CountryTable.Id.NAME)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = Constants.CountryTable.Code.NAME, length = Constants.CountryTable.Code.LENGTH, nullable = false)
     private String code;

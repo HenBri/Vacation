@@ -1,7 +1,7 @@
 package com.dharbor.talent.managervacations.usecase.user;
 
 import com.dharbor.talent.managervacations.domain.User;
-import com.dharbor.talent.managervacations.domain.dto.response.GetUsersResponse;
+import com.dharbor.talent.managervacations.domain.dto.response.user.GetUsersResponse;
 import com.dharbor.talent.managervacations.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
