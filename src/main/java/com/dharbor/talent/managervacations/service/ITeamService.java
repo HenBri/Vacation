@@ -2,14 +2,18 @@ package com.dharbor.talent.managervacations.service;
 
 import com.dharbor.talent.managervacations.domain.Team;
 import com.dharbor.talent.managervacations.domain.User;
-import com.dharbor.talent.managervacations.domain.Vacation;
 
 import java.util.List;
 
-public interface IUserService {
-    List<User> getAll();
-    User findById(Long id);
+/**
+ * @author Henry Aspeti
+ * ShadowDevHat
+ * U/J/A
+ */
+public interface ITeamService {
+    List<Team> getAll();
+    Team findById(Long id);
     void deleteById(Long id);
-    User save(User user);
-    List<User> getByTeam(Team team);
+    Team save(Team team);
+
 }

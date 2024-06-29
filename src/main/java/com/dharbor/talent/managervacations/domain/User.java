@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -35,4 +37,16 @@ public class User {
     void onPrePersist(){
         this.createDate= new Date();
     }
+
+    @ManyToOne
+    @JoinColumn(name = Constants.UsersTable.Team.NAME, referencedColumnName = Constants.TeamTable.Id.NAME)
+    private Team team;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @JoinTable(
+            name = "user_country",
+            joinColumns = @JoinColumn(name = Constants.UsersTable.Id.NAME, referencedColumnName = Constants.UsersTable.Id.NAME),
+            inverseJoinColumns = @JoinColumn(name = Constants.CountryTable.Id.NAME, referencedColumnName = Constants.CountryTable.Id.NAME)
+    )
+    private Set<Country> countries = new HashSet<>();
 }

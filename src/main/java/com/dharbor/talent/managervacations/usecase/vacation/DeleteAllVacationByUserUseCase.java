@@ -23,7 +23,7 @@ public class DeleteAllVacationByUserUseCase {
     @Autowired
     private IUserService userService;
 
-
+    @Transactional
     public GetVacationsResponseDelete execute(Long userId){
         User user = userService.findById(userId);
         GetVacationsResponseDelete vacationsResponse = build(user);

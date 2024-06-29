@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author Henry Aspeti
  * ShadowDevHat
@@ -27,4 +30,6 @@ public class Country {
     @Column(name= Constants.CountryTable.Name.NAME,length = Constants.CountryTable.Name.LENGTH, nullable = false)
     private String name;
 
+    @ManyToMany(mappedBy = "countries")
+    private Set<User> users= new HashSet<>();
 }

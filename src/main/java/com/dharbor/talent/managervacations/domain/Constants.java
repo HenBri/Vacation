@@ -25,6 +25,9 @@ final class Constants {
         static class CreateDate{
             static final String NAME="users_create_date";
         }
+        static  class Team{
+            static final String NAME="teams_user";
+        }
 
     }
     static class VacationsTable{
@@ -69,7 +72,7 @@ final class Constants {
         }
         static class Reason{
             static final String NAME = "holidays_reason";
-            static final int LENGTH= 15;
+            static final int LENGTH= 50;
 
         }
         static class Date{
@@ -77,6 +80,16 @@ final class Constants {
         }
         static class Country{
             static final String NAME= "holidays_country";
+        }
+    }
+    static class TeamTable{
+        static final String NAME= "teams_table";
+        static class Id{
+            static final String NAME ="teams_Id";
+        }
+        static class NameTeam{
+            static final String NAME="teams_name";
+            static final int LENGTH=15;
         }
     }
 }

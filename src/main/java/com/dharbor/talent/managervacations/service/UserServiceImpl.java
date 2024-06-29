@@ -1,5 +1,6 @@
 package com.dharbor.talent.managervacations.service;
 
+import com.dharbor.talent.managervacations.domain.Team;
 import com.dharbor.talent.managervacations.domain.User;
 import com.dharbor.talent.managervacations.repository.UserRepository;
 import com.dharbor.talent.managervacations.repository.VacationRepository;
@@ -30,5 +31,10 @@ public class UserServiceImpl implements IUserService{
     @Override
     public User save(User user) {
         return userRepository.save(user);
+    }
+
+    @Override
+    public List<User> getByTeam(Team team) {
+        return userRepository.findByTeam(team);
     }
 }
