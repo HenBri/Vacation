@@ -1,11 +1,14 @@
 package com.dharbor.talent.managervacations.controller;
 
+import com.dharbor.talent.managervacations.common.Message;
 import com.dharbor.talent.managervacations.domain.dto.request.CountryRequest;
 import com.dharbor.talent.managervacations.domain.dto.response.country.CountryResponse;
 import com.dharbor.talent.managervacations.domain.dto.response.country.CountryResponseDelete;
 import com.dharbor.talent.managervacations.domain.dto.response.country.GetCountriesResponse;
+import com.dharbor.talent.managervacations.exception.BadRequestExeption;
 import com.dharbor.talent.managervacations.usecase.country.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -26,10 +29,16 @@ public class CountryController {
     private GetCountryByIdUseCase getCountryByIdUseCase;
     @Autowired
     private UpdateCountryByIdUseCase updateCountryByIdUseCase;
+    @Autowired
+    private Message messaje;
 
     @PostMapping("Create")
-    public CountryResponse saveCountry(@RequestBody CountryRequest countryRequest){
-        return createCountryUseCase.execute(countryRequest);
+    public ResponseEntity<?> saveCountry(@RequestBody CountryRequest countryRequest){
+
+
+        CountryResponse countryResponse = createCountryUseCase.execute(countryRequest);
+
+        return ResponseEntity.ok(countryResponse);
     }
     @GetMapping("/GetAll")
     public GetCountriesResponse getAllCountries(){

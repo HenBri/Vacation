@@ -15,4 +15,11 @@ import java.util.Date;
 public class HolidayRequest {
     private String reason;
     private Date date;
+
+    public boolean reasonIsValid(String reason){
+        return reason == null || reason.isEmpty();
+    }
+    public boolean dateIsValid(Date date){
+        return date == null ;
+    }
 }

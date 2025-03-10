@@ -13,4 +13,7 @@ import lombok.Setter;
 @Setter
 public class TeamRequest {
     private String name;
+    public boolean nameIsValid(String name){
+        return name == null || name.isEmpty();
+    }
 }

@@ -7,7 +7,7 @@ import org.apache.coyote.Response;
 @Getter
 @Setter
 @AllArgsConstructor
-public abstract class CommonResponse extends ResponseConstant{
+public class CommonResponse extends ResponseConstant{
    private String statusCode;
    private String message;
 }

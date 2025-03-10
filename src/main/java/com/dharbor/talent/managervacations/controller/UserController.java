@@ -9,6 +9,8 @@ import com.dharbor.talent.managervacations.usecase.user.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/Users")
 public class UserController {
@@ -22,10 +24,12 @@ public class UserController {
     private DeleteUserByIdUseCase deleteUserUseCase;
     @Autowired
     private UpdateUserUseCase updateUserUseCase;
+    @Autowired
+    private DeleteAllUsersByCountryUseCase deleteAllUsersByCountryUseCase;
 
-    @PostMapping("Create")
-    public UserResponse saveUser(@RequestBody UserRequest user){
-        return createUserUseCase.execute(user);
+    @PostMapping("/Create")
+    public UserResponse saveUser(@RequestBody UserRequest user, @RequestParam List<Long> countryIds) {
+        return createUserUseCase.execute(user, countryIds);
     }
     @GetMapping("GetUserById/{userId}")
     public UserResponse getUserById(@PathVariable Long userId){
@@ -45,5 +49,10 @@ public class UserController {
     @GetMapping("GetAll")
     public GetUsersResponse getAllUsers() {
         return getAllUsers.execute();
+    }
+
+    @DeleteMapping("DeleteByCountry/{countryId}")
+    public GetUsersResponse deleteByCopuntry(@PathVariable Long countryId){
+        return deleteAllUsersByCountryUseCase.execute(countryId);
     }
 }

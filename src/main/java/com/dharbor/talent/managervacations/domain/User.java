@@ -1,5 +1,6 @@
 package com.dharbor.talent.managervacations.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -25,7 +26,7 @@ public class User {
     private String email;
     @Column(name = Constants.UsersTable.Password.NAME, length = Constants.UsersTable.Password.LENGTH, nullable = false)
     private String password;
-    @Enumerated(EnumType.STRING)
+     @Enumerated(EnumType.STRING)
     @Column(name = Constants.UsersTable.UserType.NAME,length = Constants.UsersTable.UserType.LENGTH,nullable = false)
     private UserType userType ;
 
@@ -48,5 +49,6 @@ public class User {
             joinColumns = @JoinColumn(name = Constants.UsersTable.Id.NAME, referencedColumnName = Constants.UsersTable.Id.NAME),
             inverseJoinColumns = @JoinColumn(name = Constants.CountryTable.Id.NAME, referencedColumnName = Constants.CountryTable.Id.NAME)
     )
+    @JsonIgnore
     private Set<Country> countries = new HashSet<>();
 }

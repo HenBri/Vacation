@@ -13,4 +13,12 @@ import lombok.Setter;
 public class CountryRequest {
     private String code;
     private String name;
+
+    public boolean codeIsValid(String code) {
+        return code == null || code.isEmpty();
+    }
+
+    public boolean nameIsValid(String name) {
+        return name == null || name.isEmpty();
+    }
 }
